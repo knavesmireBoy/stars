@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Star Rating</title>
+      <style>
+      
+     .stars {
+  display: flex;
+}
+
+.star {
+  flex: 25%;
+  margin: 50px 0;
+  position: relative;
+  display: inline-block;
+  color: red;
+  width: 0px;
+  height: 0px;
+  border-right: 50px solid transparent;
+  border-bottom: 33px solid gold;
+  border-left: 50px solid transparent;
+  transform: rotate(35deg);
+}
+.star:before {
+  border-bottom: 40px solid gold;
+  border-left: 15px solid transparent;
+  border-right: 25px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -25px;
+  left: -30px;
+  display: block;
+  content: '';
+  transform: rotate(-32deg);
+}
+.star:after {
+  position: absolute;
+  display: block;
+  color: red;
+  top: 0;
+  left: -50px;
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid gold;
+  border-left: 50px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+}
+
+/* PRESENTATION STYLES */
+body {
+  align-items: center;
+  background: #333;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+      </style>
+  </head>
+  <body>
+<div class="stars">
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+</div>
+      
+      <!-- Draw the star as a symbol and remove it from view -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="star" viewBox="214.7 0 182.6 792">
+    <!-- <path>s and whatever other shapes in here -->  
+  </symbol>
+</svg>
+    
+<!-- Then use anywhere and as many times as we want! -->
+<svg class="icon">
+  <use xlink:href="#star" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#star" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#star" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#star" />
+</svg>
+
+<svg class="icon">
+  <use xlink:href="#star" />
+</svg
+
+  </body>
+</html>
